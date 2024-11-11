@@ -24,10 +24,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-//require_once(dirname(__FILE__).'/consts.php');
-//require_once(dirname(__FILE__).'/blocklib_content_search.php');
-//require_once(dirname(__FILE__).'/blocklib_content_list.php');
-//require_once(dirname(__FILE__).'/blocklib_footer.php');
 
 class block_course_tree_list extends block_base {
     /**
@@ -132,8 +128,7 @@ class block_course_tree_list extends block_base {
 		    if (!$courses) {
 				$out .= get_string('noenrollments', 'block_course_tree_list');
 		    } else {
-				$query = 'SELECT * FROM '.$CFG->prefix.'course_categories ORDER BY sortorder';
-				$course_categories = $DB->get_records_sql($query);
+				$course_categories = $DB->get_records('course_categories', null, 'sortorder');
 
 				foreach ($course_categories as $cc) {
 					//add the sub_id element to all objects
@@ -161,9 +156,7 @@ class block_course_tree_list extends block_base {
 					if ($CFG->version < 2012120300) {
 						$numsections = $course->numsections;
 					} else {
-						$sql = 'SELECT value FROM '.$CFG->prefix.'course_format_options WHERE courseid = '.$course->id.' AND name = \'numsections\'';
-						$rec = $DB->get_records_sql($sql);
-						$numsections = reset($rec)->value;	
+						$numsections = $DB->get_field('course_format_options', 'value', ['courseid' => $course->id, 'name' => 'numsections']);
 					}
 
 					$startdate = $course->startdate - ($one_week*$show_weeks_before);
