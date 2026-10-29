@@ -1,51 +1,59 @@
 ol.tree {
-	margin:0px;
-	width:100%;
+    margin: 0;
+    width: 100%;
 }
-ol.tree li { 
-	position: relative; 
-	list-style: none;
-	white-space: nowrap;
-	overflow:hidden;
-	text-overflow: ellipsis;
-	padding-left:4px;
+ol.tree li {
+    position: relative;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 4px;
 }
 ol.tree li input {
-	position: absolute;
-	left: 0;
-	margin-left: 0;
-	z-index: 2;
-	cursor: pointer;
-	opacity: 0;
-	-ms-filter: "alpha(opacity=0)";
-	height: 1em;
-	width: 1em;
-	top: 0;
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    -ms-filter: "alpha(opacity=0)";
+    height: 1em;
+    width: 1em;
+    top: 0;
 }
 ol.tree li label {
-	background:	url([[pix:f/folder]]) 13px 0px no-repeat;
-	cursor: pointer;
-	display: block;
-	padding-left: 33px;
-	overflow:hidden;
-	text-overflow: ellipsis;
+    background: url([[pix:f/folder]]) 13px 0 no-repeat;
+    cursor: pointer;
+    display: block;
+    padding-left: 33px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 ol.tree li input + ol {
-	background: url([[pix:t/switch_plus]]) 44px 3px no-repeat;
-	margin: -1.25em 0 0 -44px;
-	/*margin: -0.938em 0 0 -44px; /* 15px */
-	height: 16px;
+    background: url([[pix:t/switch_plus]]) 44px 3px no-repeat;
+    margin: -1.25em 0 0 -44px;
+    height: 16px;
 }
-ol.tree li input + ol > li { display: none; margin-left: -14px !important; padding-left: 1px; }
+ol.tree li input + ol > li {
+    display: none;
+    /* stylelint-disable-next-line declaration-no-important -- Preserve the expanded tree's left offset. */
+    margin-left: -14px !important;
+    padding-left: 1px;
+}
 
 ol.tree li input:checked + ol,
-ol.tree li input.checked + ol
- {
-	background: url([[pix:t/switch_minus]]) 44px 0px no-repeat;
-	margin: -15px 0 0 -44px; /* 20px */
-	padding: 15px 0 0 80px;
-	height: auto;
+ol.tree li input.checked + ol {
+    background: url([[pix:t/switch_minus]]) 44px 0 no-repeat;
+    margin: -15px 0 0 -44px; /* 20px */
+    padding: 15px 0 0 80px;
+    height: auto;
 }
 
-ol.tree li input:checked + ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
-ol.tree li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }
+ol.tree li input:checked + ol > li {
+    display: block;
+    margin: 0 0 0.125em;  /* 2px */
+}
+ol.tree li input:checked + ol > li:last-child {
+    margin: 0 0 0.063em; /* 1px */
+}
