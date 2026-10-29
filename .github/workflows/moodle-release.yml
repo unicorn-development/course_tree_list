@@ -10,6 +10,9 @@ on:
         description: 'Tag to be released'
         required: true
 
+permissions:
+  contents: read
+
 jobs:
   release-to-marketplace:
     uses: moodlehq/moodle-plugin-release/.github/workflows/moodle-release.yml@main
