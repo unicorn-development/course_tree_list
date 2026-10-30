@@ -1,6 +1,5 @@
 <?php
 // This file is part of course-tree-access plugin for Moodle
-// http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -13,8 +12,7 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
  * English language strings for the quick-course-block.
@@ -25,16 +23,15 @@
  */
 
 
+$string['course_tree_list:addinstance'] = 'Add a new course tree block';
+$string['course_tree_list:myaddinstance'] = 'Add a new course tree block to the My Moodle page';
+$string['descweeksafter'] = 'If a category contains a class, how many weeks after the class to default the category open.';
+$string['descweeksbefore'] = 'If a category contains a class, how many weeks before the class to default the category open.';
+$string['noenrollments'] = 'Not Enrolled in any courses';
+$string['plugindisplayname'] = 'Course List';
 $string['pluginname'] = 'Course Tree List';
 $string['pluginname_help'] = 'Course Tree List';
 $string['pluginname_link'] = 'block/course_tree_list';
 $string['pluginnamesummary'] = 'Display only user enrolled courses in heirarchy collapsible menu';
-$string['plugindisplayname'] = 'Course List';
-$string['course_tree_list:addinstance'] = 'Add a new course tree block';
-$string['course_tree_list:myaddinstance'] = 'Add a new course tree block to the My Moodle page';
-
-$string['weeksbefore'] = 'Weeks Before';
-$string['descweeksbefore'] = 'If a category contains a class, how many weeks before the class to default the category open.';
 $string['weeksafter'] = 'Weeks After';
-$string['descweeksafter'] = 'If a category contains a class, how many weeks after the class to default the category open.';
-$string['noenrollments'] = 'Not Enrolled in any courses';
+$string['weeksbefore'] = 'Weeks Before';

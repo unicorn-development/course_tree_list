@@ -1,6 +1,5 @@
 <?php
 // This file is part of course-quick-access plugin for Moodle
-// http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -13,8 +12,7 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
  * Plugin versioning.
@@ -26,9 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2024111200;
+$plugin->version = 2026102900;
 $plugin->requires = 2022112800.00;
 $plugin->cron      = 0;
 $plugin->component = 'block_course_tree_list';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release   = '2.0.0 for Moodle 4.1+ (Build: 2024111200)';
+$plugin->release   = '2.0.1 for Moodle 4.1+ (Build: 2026102900)';

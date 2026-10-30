@@ -1,4 +1,4 @@
-<?php  
+<?php
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -12,8 +12,7 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
  * Contains administration settings options.
@@ -23,13 +22,20 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$settings->add(new admin_setting_configtext('course_tree_list/Weeks_Before',
-        get_string('weeksbefore', 'block_course_tree_list'), get_string('descweeksbefore', 'block_course_tree_list'),
-        2, PARAM_INT));
+defined('MOODLE_INTERNAL') || die();
 
-$settings->add(new admin_setting_configtext('course_tree_list/Weeks_After',
-        get_string('weeksafter', 'block_course_tree_list'), get_string('descweeksafter', 'block_course_tree_list'),
-        2, PARAM_INT));
+$settings->add(new admin_setting_configtext(
+    'course_tree_list/Weeks_Before',
+    get_string('weeksbefore', 'block_course_tree_list'),
+    get_string('descweeksbefore', 'block_course_tree_list'),
+    2,
+    PARAM_INT
+));
 
-
-
+$settings->add(new admin_setting_configtext(
+    'course_tree_list/Weeks_After',
+    get_string('weeksafter', 'block_course_tree_list'),
+    get_string('descweeksafter', 'block_course_tree_list'),
+    2,
+    PARAM_INT
+));
